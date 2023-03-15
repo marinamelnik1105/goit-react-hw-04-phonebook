@@ -36,14 +36,14 @@ export const App =()=>
     }
     if (repeatCheck()) {
       return alert(`${newContacts.name} is already in contacts.`)
-    } else { setContacts(prevState => [...prevState.contacts, newContacts])
+    } else { setContacts(prevState => [...prevState, newContacts])
     }
    
     
   }
  const deleteContacts = contactId =>
   {
-    setContacts(prevState => prevState.contacts.filter(contact => contact.id !== contactId));
+    setContacts(prevState => prevState.filter(contact => contact.id !== contactId));
   };
  const changeFilter = (e) =>
   {
